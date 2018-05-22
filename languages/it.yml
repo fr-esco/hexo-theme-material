@@ -1,0 +1,29 @@
+sidebar:
+    homepage: "Home"
+    archive: "Archivio"
+    article_num: "Numero di articoli"
+post:
+    visitor: "Visitatori"
+    views: "Visualizzazioni"
+    continue: "Leggi tutto"
+    older: "Precedente"
+    newer: "Successivo"
+    qrcode: "Leggi su un altro dispositivo"
+    comments_load_button: "Leggi commenti"
+    permalink: "Link a questo articolo: "
+share:
+    article_rss: "Articolo RSS"
+    comment_rss: "Commento RSS"
+    toTwitter: "Condividi su Twitter"
+    toFacebook: "Condividi su Facebook"
+    toLinkedIn: "Condividi su LinkedIn"
+    toTelegram: "Condividi su Telegram"
+    toGplus: "Condividi su Google+"
+    toWeibo: "Condividi su Weibo"
+    toQQ: "Condividi su QQ"
+title:
+    category: "Categorie"
+    tag: "Tag"
+misc:
+    home: "Home"
+    theme: "Tema"
