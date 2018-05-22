@@ -1,6 +1,35 @@
 <!-- Import Roboto -->
 <% if(theme.fonts.use === "google") { %>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <%- // cssLsload({path:'https://fonts.googleapis.com/css?family=Roboto:300',key:'roboto_font_300'}) %>
+    <%- // cssLsload({path:'https://fonts.googleapis.com/css?family=Roboto:400',key:'roboto_font_400'}) %>
+    <%- // cssLsload({path:'https://fonts.googleapis.com/css?family=Roboto:500',key:'roboto_font_500'}) %>
+    <!-- link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" -->
+    <style>
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-display: optional;
+        src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-display: optional;
+        src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-display: optional;
+        src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    </style>
 <% } else if(theme.fonts.use === "ustc") { %>
     <link href="https://fonts.proxy.ustclug.org/css?family=Roboto:300,400,500" rel="stylesheet">
 <% } else if(theme.fonts.use === "custom") { %>
@@ -77,5 +106,6 @@
 <% if(theme.vendors.materialcdn) { %>
     <%- cssLsload({path:(theme.vendors.materialcdn + '/css/material-icons.css'),key:'material_icons'}) %>
 <% } else { %>
-    <%- cssLsload({path:('css/material-icons.css'),key:'material_icons'}) %>
+    <%- cssLsload({path:'https://fonts.googleapis.com/icon?family=Material+Icons',key:'material_icons'}) %>
+    <%- // cssLsload({path:('css/material-icons.css'),key:'material_icons'}) %>
 <% } %>
