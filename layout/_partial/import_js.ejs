@@ -60,7 +60,7 @@
 
 <!-- Import prettify js  -->
 <% if (theme.prettify.enable){ %>
-    <% if ( (is_post()) ) { %>
+    <% if ( is_post() || is_current('about') ) { %>
         <% if(theme.vendors.prettify) { %>
             <%- jsLsload({path:(theme.vendors.prettify),key:'prettify_js'}) %>
         <% } else if(theme.vendors.materialcdn) { %>
@@ -87,7 +87,7 @@
     });
 
     <% if (theme.prettify.enable) { %>
-        <% if ( (is_post()) ) { %>
+        <% if ( is_post() || is_current('about') ) { %>
             $(function() {
                 $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
                 prettyPrint();

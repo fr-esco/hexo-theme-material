@@ -87,7 +87,7 @@
         <%- cssLsload({path:(theme.vendors.materialcdn + '/css/style.min.css'),key:'style_css'}) %>
 
         <% if (theme.prettify.enable){ %>
-            <% if ( (is_post()) ) { %>
+            <% if ( is_post() || is_current('about') ) { %>
                 <%- cssLsload({path:(theme.vendors.materialcdn + '/css/prettify.min.css'),key:'prettify_css'}) %>
                 <%- cssLsload({path:(theme.vendors.materialcdn + '/css/prettify/' + theme.prettify.theme + '.min.css'),key:'prettify_theme'}) %>
             <% } %>
@@ -98,7 +98,7 @@
         <%- cssLsload({path:('css/style.min.css'),key:'style_css'}) %>
 
         <% if (theme.prettify.enable){ %>
-            <% if ( (is_post()) ) { %>
+            <% if ( is_post() || is_current('about') ) { %>
                 <%- cssLsload({path:('css/prettify.min.css'),key:'prettify_css'}) %>
                 <%- cssLsload({path:('css/prettify/' + theme.prettify.theme + '.min.css'),key:'prettify_theme'}) %>
             <% } %>
